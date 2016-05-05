@@ -1,3 +1,3 @@
 # Machine Learning
 
-Stuff for machine learning.
+Python and Machine Learning
