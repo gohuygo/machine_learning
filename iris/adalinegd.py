@@ -18,6 +18,8 @@ class AdalineGD(object):
   """
 
   def __init__(self, eta=0.01, n_iter=50):
+    # eta and n_iter are considered hyperparameters
+    # how do we find optimal values?
     self.eta = eta
     self.n_iter = n_iter
 
@@ -63,4 +65,4 @@ class AdalineGD(object):
 
   def predict(self, X):
     """Return class label after unit step"""
-    return np.where(Self.activation(X) >= 0.0, 1, -1)
+    return np.where(self.activation(X) >= 0.0, 1, -1)
