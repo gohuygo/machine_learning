@@ -1,3 +1,4 @@
+from numpy.random import seed
 import numpy as np
 
 class AdalineSGD(object):
@@ -31,7 +32,7 @@ class AdalineSGD(object):
     self.w_initialized = False
     self.shuffle = shuffle
 
-    if random-state
+    if random_state:
       seed(random_state)
 
   def fit(self, X, y):
@@ -86,8 +87,8 @@ class AdalineSGD(object):
   def _update_weights(self, xi, target):
     """Apply Adaline learning rule to update weights"""
     output = self.net_input(xi)
-    error = (taret - output)
-    self.w_[1:] += self.eta * xi.dot(errors)
+    error = (target - output)
+    self.w_[1:] += self.eta * xi.dot(error)
     self.w_[0] += self.eta * error
     cost = 0.5 * error**2
     return cost
